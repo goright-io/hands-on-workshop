@@ -24,7 +24,7 @@ You need to edit "homepage" property in ./product/package.json. It should be poi
 
 ```
 {
-  "homepage": "https://<USERNAME>.github.io/<REPOSITORY_NAME>",
+  "homepage": "https://<USERNAME>.github.io/<REPOSITORY_NAME>/product",
   ...
 }
 ```
@@ -38,7 +38,7 @@ You need to edit "homepage" property in ./product/package.json. It should be poi
 yarn product:version
 ```
 
-2. As soon as you push your commits to main branch, a Github Action(`.github/workflows/release.yml`) will be triggered. It performs two tasks:
+2. As soon as you push your commits to main branch, a Github Action(`.github/workflows/product-release.yml`) will be triggered. It performs two tasks:
 - Checks the version of the product and compare it with previous one.
 - If version change is detected, build and deploy workflow is activated.
 
@@ -53,5 +53,5 @@ at `https://<USERNAME>.github.io/<REPOSITORY_NAME>/product/"`.
 If you still need to deploy the previous version for some reason, you can run it manually:
 
 ```
-yarn deploy
-```
+yarn deploy:product
+``` 
