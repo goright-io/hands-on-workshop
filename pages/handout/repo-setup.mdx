@@ -31,16 +31,10 @@ as collaborators.
 We are taking advantage of GitHub Action and deploy design system when changes are pushed.
 But to make it working, you need a bit of setup.
 
-### 1. Define the `homepage` property
-You need to edit "homepage" property in ./design-system/package.json. It should be pointing to your repository.
-
-```
-{
-  "homepage": "https://<USERNAME>.github.io/<REPOSITORY_NAME>",
-  ...
-}
-
-Commit and push.
+### 1. Change version
+You need to change version in order to run automatic deploy. Let's do it for the first run.
+You can manually change version on `./design-system/package.json`. Set it to `0.1.1`, commit
+and push.
 
 ### 2. Wait for the first build
 
