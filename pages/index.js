@@ -495,7 +495,7 @@ export default function IndexPage() {
         </div>
       </Section>
       <SectionShape className="transform rotate-180" />
-      <section className="container py-6 mx-auto mb-12 text-center">
+              {/* <section className="container py-6 mx-auto mb-12 text-center">
         <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
           Tickets
         </h2>
@@ -545,7 +545,7 @@ export default function IndexPage() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
