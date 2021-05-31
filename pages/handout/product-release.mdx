@@ -17,15 +17,14 @@ yarn product:build
 
 ## Preparing for deployment
 
-If you want to take advantage of Github Actions and continuosly deploy your product and storybook to Github Pages, you will need to set a few things:
+We can automatically deploy the product similarly to how it is done for
+the design system.
 
-- Make sure your working repository is public, and the deployment branch is set to "gh-pages". It can be checked and fixed in repository settinds on Github.
-
-- You need to edit "homepage" property in ./product/package.json. It should be pointing to your repository.
+You need to edit "homepage" property in ./product/package.json. It should be pointing to your repository.
 
 ```
 {
-  "homepage": "https://<USERNAME>.github.io/<REPOSITORY_NAME>",
+  "homepage": "https://<USERNAME>.github.io/<REPOSITORY_NAME>/product",
   ...
 }
 ```
@@ -39,12 +38,20 @@ If you want to take advantage of Github Actions and continuosly deploy your prod
 yarn product:version
 ```
 
-2. As soon as you push your commits to main branch, a Github Action(`.github/workflows/release.yml`) will be triggered. It performs two tasks:
+2. As soon as you push your commits to main branch, a Github Action(`.github/workflows/product-release.yml`) will be triggered. It performs two tasks:
 - Checks the version of the product and compare it with previous one.
 - If version change is detected, build and deploy workflow is activated.
 
-Deploy won't run if the version is the same. If you still need to deploy the previous version for some reason, you can run it manually:
+**You have to change product version in order to deploy**. Product version can be changed
+in `product/package.json`. Deploy won't run if the version is the same.
+
+After the sucessful deployment,  you should be able to see the product page
+at `https://<USERNAME>.github.io/<REPOSITORY_NAME>/product/"`.
+
+
+
+If you still need to deploy the previous version for some reason, you can run it manually:
 
 ```
-yarn deploy
-```
+yarn deploy:product
+``` 
