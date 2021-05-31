@@ -41,10 +41,10 @@ export default function IndexPage() {
           </p>
         </div>
 
-        <div className="flex w-full flex-wrap">
+        <div className="flex flex-wrap w-full">
 
           {/* <!--Left Col--> */}
-          <div class="flex flex-col md:w-1/2 items-center">
+          <div className="flex flex-col items-center md:w-1/2">
             <p className="w-full text-xl font-bold text-center uppercase tracking-loose">
               2 & 3 June
             </p>
@@ -68,7 +68,7 @@ export default function IndexPage() {
           </div>
 
           {/* <!--Right Col--> */}
-          <div className="flex flex-col md:w-1/2 items-center">
+          <div className="flex flex-col items-center md:w-1/2">
           <p className="w-full text-xl font-bold text-center uppercase tracking-loose">
             1 & 2 September
           </p>
@@ -494,8 +494,8 @@ export default function IndexPage() {
           </p>
         </div>
       </Section>
-      <SectionShape className="transform rotate-180" />
-              {/* <section className="container py-6 mx-auto mb-12 text-center">
+      {/* <SectionShape className="transform rotate-180" />
+             <section className="container py-6 mx-auto mb-12 text-center">
         <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
           Tickets
         </h2>
@@ -504,16 +504,16 @@ export default function IndexPage() {
         </div>
         <div className="container flex flex-col flex-wrap max-w-5xl px-3 py-16 mx-auto md:flex-row">
           {/* LEFT COL */}
-          <div className="flex flex-col w-full pr-6 mt-12 text-center md:w-6/12">
+          {/* <div className="flex flex-col w-full pr-6 mt-12 text-center md:w-6/12">
             <p className="w-full text-xl font-bold text-center uppercase tracking-loose">
               8 & 9 April
             </p>
             <p className="my-4 text-3xl leading-tight">
               SOLD OUT
             </p>
-          </div>
+          </div> */}
           {/* RIGHT COL */}
-          <div className="flex flex-col w-full pl-6 mt-12 justify- md:w-6/12">
+          {/* <div className="flex flex-col w-full pl-6 mt-12 justify- md:w-6/12">
             <p className="w-full text-xl font-bold uppercase tracking-loose">
               5 & 6 May
             </p>
@@ -545,7 +545,7 @@ export default function IndexPage() {
             </Button>
           </div>
         </div>
-      </section> */}
+      </section>   */}
     </>
   );
 }
