@@ -29,6 +29,8 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          {/* Fonts */}
+          <link href="/fonts/style.css" rel="stylesheet" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
@@ -49,9 +51,8 @@ class MyDocument extends Document {
           <script
             src={`https://www.googleoptimize.com/optimize.js?id=${OPT_CONTAINER_ID}`}
           ></script>
-
         </Head>
-        <body className="leading-normal tracking-normal text-white gradient">
+        <body className="">
           <Main />
           <NextScript />
         </body>
