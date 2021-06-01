@@ -20,6 +20,7 @@ import CheckList from "./icons/check-list.svg";
 import Sketch from "./icons/sketch2.svg";
 import SettingsIcon from "./icons/settings.svg";
 import Flow from "./icons/flow.svg";
+import Zeroheight from "./icons/zeroheight.svg"
 
 const pathPrefix = "/handout";
 const blocks = [
@@ -107,6 +108,13 @@ const blocks = [
     roles: ["developer"],
     day: 2,
   },
+  {
+    title: "Documentations",
+    image: Zeroheight,
+    slug: "documentations",
+    roles: ["designer"],
+    day: 2,
+  },
   // {
   //   title: "Visual regression tests",
   //   image: TestingIcon,
@@ -124,12 +132,11 @@ const blocks = [
     title: "Feedback Form",
     image: FeedbackIcon,
     slug: "feedback",
-    url:
-      "https://docs.google.com/forms/d/124ha3LG7-07rizB9yjoqNGkB31Yzw6jtFvImsz7-Utg",
+    url: "https://docs.google.com/forms/d/124ha3LG7-07rizB9yjoqNGkB31Yzw6jtFvImsz7-Utg",
     roles: ["designer", "developer"],
     day: 2,
   },
-];
+]
 
 function Blocks(props) {
   return (
