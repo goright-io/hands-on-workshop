@@ -1,15 +1,53 @@
 var flattenColorPalette = require("tailwindcss/lib/util/flattenColorPalette")
   .default;
 
+const designSystem = require("@goright/design-system");
+const goRightTheme = designSystem.twconfig.theme;
 module.exports = {
   purge: {
-    content: ["./components/**/*.js", "./pages/**/*.js"],
+    content: [
+      "./components/**/*.js",
+      "./pages/**/*.js",
+      "@goright/design-system",
+    ],
     options: {
       safelist: ["bg-v-dark-blue", "prose"],
     },
   },
   theme: {
+    ...goRightTheme,
+
     extend: {
+      typography: () => ({
+        DEFAULT: {
+          css: {
+            color: goRightTheme.colors.light["on-background"]["900"],
+            maxWidth: "65ch",
+            p: {
+              fontSize: goRightTheme.fontSize.base,
+              fontWeight: goRightTheme.fontWeight.base,
+              fontFamily: goRightTheme.fontFamily.base.join(","),
+              lineHeight: goRightTheme.lineHeight.base,
+              letterSpacing: goRightTheme.letterSpacing.base,
+            },
+            h2: {
+              fontSize: goRightTheme.fontSize["3Xl"],
+              fontWeight: goRightTheme.fontWeight["3Xl"],
+              fontFamily: goRightTheme.fontFamily["3Xl"].join(","),
+              lineHeight: goRightTheme.lineHeight["3Xl"],
+              letterSpacing: goRightTheme.letterSpacing["3Xl"],
+            },
+            pre: {
+              backgroundColor: goRightTheme.colors.primary["100"],
+              color: goRightTheme.colors.light["on-background"]["900"],
+            },
+            a: {
+              textDecoration: "none",
+              underline: "none",
+            },
+          },
+        },
+      }),
       colors: {
         "v-red": "rgba(236, 78, 75, 1)",
         "v-yellow": "rgba(248, 209, 121, 1)",
