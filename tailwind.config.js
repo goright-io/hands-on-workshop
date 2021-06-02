@@ -18,21 +18,23 @@ module.exports = {
     },
   },
   theme: {
-    ...goRightTheme,
-    ...defaultConfig.theme,
+    typography: {},
 
     extend: {
       typography: () => ({
+        ...defaultConfig.theme.typography,
         DEFAULT: {
           css: {
             color: goRightTheme.colors.light["on-background"]["900"],
-            maxWidth: "65ch",
+            maxWidth: "72ch",
             p: {
               fontSize: goRightTheme.fontSize.base,
               fontWeight: goRightTheme.fontWeight.base,
               fontFamily: goRightTheme.fontFamily.base.join(","),
               lineHeight: goRightTheme.lineHeight.base,
               letterSpacing: goRightTheme.letterSpacing.base,
+              paddingTop: "1rem",
+              paddingBottom: "1rem",
             },
             h2: {
               fontSize: goRightTheme.fontSize["3Xl"],
@@ -40,10 +42,20 @@ module.exports = {
               fontFamily: goRightTheme.fontFamily["3Xl"].join(","),
               lineHeight: goRightTheme.lineHeight["3Xl"],
               letterSpacing: goRightTheme.letterSpacing["3Xl"],
+              marginTop: "3rem"
+            },
+            h3: {
+              fontSize: goRightTheme.fontSize["2Xl"],
+              fontWeight: goRightTheme.fontWeight["2Xl"],
+              fontFamily: goRightTheme.fontFamily["2Xl"].join(","),
+              lineHeight: goRightTheme.lineHeight["2Xl"],
+              letterSpacing: goRightTheme.letterSpacing["2Xl"],
+              marginTop: "3rem"
             },
             pre: {
               backgroundColor: goRightTheme.colors.primary["100"],
               color: goRightTheme.colors.light["on-background"]["900"],
+              padding: "1rem"
             },
             a: {
               textDecoration: "none",
@@ -69,6 +81,10 @@ module.exports = {
         "1/1": "100%",
       },
     },
+        ...defaultConfig.theme,
+            ...goRightTheme,
+
+
   },
   plugins: [
     ({ addUtilities, e, theme, variants }) => {
