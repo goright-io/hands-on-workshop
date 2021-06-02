@@ -1,5 +1,8 @@
 var flattenColorPalette = require("tailwindcss/lib/util/flattenColorPalette")
   .default;
+  
+  
+  const defaultConfig = require("tailwindcss/defaultConfig")
 
 const designSystem = require("@goright/design-system");
 const goRightTheme = designSystem.twconfig.theme;
@@ -16,6 +19,7 @@ module.exports = {
   },
   theme: {
     ...goRightTheme,
+    ...defaultConfig.theme,
 
     extend: {
       typography: () => ({
