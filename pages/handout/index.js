@@ -177,8 +177,8 @@ export default function HandoutPage() {
       {/* CARDS SECTION */}
       <div className="flex-1 w-full h-full bg-gray-200">
         <div className="container flex flex-wrap max-w-5xl m-8 mx-auto">
-          {/* <Blocks day={1}/> */}
-          <Blocks day={"all"}/>
+          <Blocks day={1}/>
+          {/* <Blocks day={"all"}/> */}
         </div>
       </div>
     </>
