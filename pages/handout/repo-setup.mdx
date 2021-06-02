@@ -26,28 +26,6 @@ In your repository, go to *Settings -> Manage access* and invite your team membe
 as collaborators.
 
 
-## Setting up for automatic deployment
-
-We are taking advantage of GitHub Action and deploy design system when changes are pushed.
-But to make it working, you need a bit of setup.
-
-### 1. Change version
-You need to change version in order to run automatic deploy. Let's do it for the first run.
-You can manually change version on `./design-system/package.json`. Set it to `0.1.1`, commit
-and push.
-
-### 2. Wait for the first build
-
-Go to *Actions* tab in your GitHub repo and wait for the first build.
-
-### 3. Define the deployment branch
-
- Make sure your working repository is public, and the deployment branch is set to "gh-pages".
- For that, go to **Settings -> Pages** and choose the `gh-pages` branch in the **Source**
- select.
-
- You should be able to see the design system deployed at `https://<USERNAME>.github.io/<REPOSITORY_NAME>/design-system/"`.
-
 
 ## On your computers
 
@@ -93,3 +71,25 @@ yarn product
 
 You can keep both library's and product's servers running in parallel. Or you can
 yet stay with the library only.
+
+## Setting up for automatic deployment
+
+We are taking advantage of GitHub Action and deploy design system when changes are pushed.
+But to make it working, you need a bit of setup.
+
+### 1. Change version
+You need to change version in order to run automatic deploy. Let's do it for the first run.
+You can manually change version on `./design-system/package.json`. Set it to `0.1.1`, commit
+and push.
+
+### 2. Wait for the first build
+
+Go to *Actions* tab in your GitHub repo and wait for the first build.
+
+### 3. Define the deployment branch
+
+ Make sure your working repository is public, and the deployment branch is set to "gh-pages".
+ For that, go to **Settings -> Pages** and choose the `gh-pages` branch in the **Source**
+ select.
+
+ You should be able to see the design system deployed at `https://<USERNAME>.github.io/<REPOSITORY_NAME>/design-system/"`.
