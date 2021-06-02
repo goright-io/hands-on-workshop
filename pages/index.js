@@ -28,7 +28,7 @@ import Yandex from "../public/logo/yandex.svg";
 
 export default function IndexPage() {
   return (
-    <>
+    <div className="leading-normal tracking-normal text-white gradient">
       <Header />
       <Hero>
         <div className="flex flex-col items-center justify-center w-full mt-12 text-center md:text-left">
@@ -546,6 +546,6 @@ export default function IndexPage() {
           </div>
         </div>
       </section>   */}
-    </>
+    </div>
   );
 }
