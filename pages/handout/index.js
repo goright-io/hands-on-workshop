@@ -132,7 +132,7 @@ const blocks = [
     title: "Feedback Form",
     image: FeedbackIcon,
     slug: "feedback",
-    url: "https://docs.google.com/forms/d/124ha3LG7-07rizB9yjoqNGkB31Yzw6jtFvImsz7-Utg",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSc3kF7cKOEf2hXM5-iDEhfW0UdA7xNgGZxYk6bHdb_QfjTkUA/viewform?usp=sf_link",
     roles: ["designer", "developer"],
     day: 2,
   },
@@ -177,8 +177,8 @@ export default function HandoutPage() {
       {/* CARDS SECTION */}
       <div className="flex-1 w-full h-full bg-gray-200">
         <div className="container flex flex-wrap max-w-5xl m-8 mx-auto">
-          <Blocks day={1}/>
-          {/* <Blocks day={"all"}/> */}
+          {/* <Blocks day={1}/> */}
+          <Blocks day={"all"}/>
         </div>
       </div>
     </>
