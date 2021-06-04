@@ -51,19 +51,9 @@ export default function IndexPage() {
             <p className="w-full text-xl font-bold text-center uppercase tracking-loose">
               <LocalTime start={11} end={15} format="%start%-%end% %timezone%" />
             </p>
-            <Button
-              variant="base"
-              className="mt-12 mb-0"
-              name="hero register"
-              onClick={() =>
-                (location.href =
-                  "https://www.eventbrite.com/e/hands-on-with-design-systems-june-tickets-152896600849")
-              }
-            >
-              REGISTER
-            </Button>
-            <p className="m-6 mx-6 text-sm text-bold">
-              <b>Available tickets</b>: 1 for a designer, 2 for developers
+
+            <p className="m-6 mx-6 text-xl text-bold">
+              <b>SOLD OUT</b>
             </p>
           </div>
 
@@ -87,7 +77,7 @@ export default function IndexPage() {
             REGISTER
           </Button>
           <p className="m-6 mx-6 text-sm text-bold">
-            10 tickets for designers, 10 tickets for developers
+            8 tickets for designers, 8 tickets for developers
           </p>
           {/* <p className="w-full text-xl font-bold text-center uppercase tracking-loose">
             Want same workshop but
