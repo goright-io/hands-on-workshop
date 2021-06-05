@@ -30,7 +30,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {/* Fonts */}
-          <link href="/fonts/style.css" rel="stylesheet" />
+          <link href="/fonts/styles.css" rel="stylesheet" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async

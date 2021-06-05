@@ -1,21 +1,17 @@
 var flattenColorPalette = require("tailwindcss/lib/util/flattenColorPalette")
   .default;
   
+  const designSystem = require("@goright/design-system");
+  const goRightTheme = designSystem.twconfig.theme;
   
   const defaultConfig = require("tailwindcss/defaultConfig")
+const resolveConfig = require("tailwindcss/resolveConfig")
+const merge = require("lodash/merge");
+let mergedThemes = merge(defaultConfig.theme, goRightTheme);
 
-const designSystem = require("@goright/design-system");
-const goRightTheme = designSystem.twconfig.theme;
-module.exports = {
+const conf = {
   purge: {
-    content: [
-      "./components/**/*.js",
-      "./pages/**/*.js",
-      "@goright/design-system",
-    ],
-    options: {
-      safelist: ["bg-v-dark-blue", "prose"],
-    },
+    enabled: false
   },
   theme: {
     typography: {},
@@ -81,8 +77,7 @@ module.exports = {
         "1/1": "100%",
       },
     },
-        ...defaultConfig.theme,
-            ...goRightTheme,
+    ...mergedThemes
 
 
   },
@@ -114,3 +109,7 @@ module.exports = {
     },
   },
 };
+
+console.log(conf);
+
+module.exports = conf;
