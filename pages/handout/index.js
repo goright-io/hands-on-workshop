@@ -107,7 +107,7 @@ const Blocks = (props) => {
             key={block.slug}
             heading={block.title}
             link={{ link: undefined, text: undefined }}
-            className={enabled ? "cursor-ponter" : ""}
+            className={enabled ? "cursor-ponter p-5" : ""}
           >
             <div className="flex">
               <Badge
@@ -141,7 +141,7 @@ const Blocks = (props) => {
 
 export default function HandoutPage() {
   return (
-    <div className="container mx-auto mt-16">
+    <div className="container max-w-5xl mx-auto mt-16">
       <div className="text-center text-light-on-background-900">
         <Text variant="xlBolder" className="mb-6">
           Welcome
