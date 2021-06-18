@@ -1,24 +1,18 @@
 export default function Footer() {
   return (
-    <footer className="bg-white">
-      <div className="container mx-auto px-8">
-        <div className="w-full flex flex-col md:flex-row py-6">
-          <div className="flex-grow mb-6 text-black">
-            <p className="text-v-red no-underline hover:no-underline font-bold text-xl lg:text-2xl">
-              HANDS-ON WITH DESIGN SYSTEMS
-            </p>
-          </div>
-          <div className="text-v-red">
-            ©{" "}
+    <footer className="bg-light-on-background-900 text-light-on-background-50">
+      <div className="container px-8 mx-auto">
+        <div className="flex w-full py-2 md:flex-row">
+            ©{"  "}
             <a
-              href="https://varya.me"
+              href="https://goright.io/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-bold  underline hover:no-underline"
+              className="font-bold underline hover:no-underline "
             >
-              Varya Stepanova
+              GoRight
             </a>
-          </div>
+            {"  "}2021
         </div>
       </div>
     </footer>
