@@ -1,6 +1,6 @@
 import "../css/index.css";
 import Head from "next/head";
-import Layout from "@components/layout";
+import Layout from "@templates/layoutBase";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
         <meta
           name="Description"
           content="This workshop helps you learn and practice design systems working in a team. You can join as a designer or developer."
-        />
+        /> */}
 
         {/* OG tags */}
         <meta property="og:title" content="Hands-on with Design Systems: 2-day workshop with Figma & React" />
@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="keywords" content="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development" />
         <meta name="robots" content="index, follow" />
 
-      </Head>
+      </Head> 
 
       <Component {...pageProps} />
     </Layout>
