@@ -4,7 +4,7 @@
   "description": "Landing page for hands-on wirth design systems workshop",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next",
     "export": "next build && next export"
@@ -15,12 +15,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@goright/design-system": "^0.0.6",
+    "@goright/design-system": "0.0.7",
     "@tailwindcss/typography": "^0.4.0",
     "babel-plugin-inline-react-svg": "^1.1.2",
     "clsx": "^1.1.1",
     "imagemin-optipng": "^8.0.0",
-    "next": "10.0.4",
+    "next": "10.2.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-ga": "^3.3.0"
@@ -42,7 +42,8 @@
     "postcss-flexbugs-fixes": "5.0.2",
     "postcss-hover-media-feature": "1.0.0",
     "postcss-preset-env": "6.7.0",
+    "react-multi-carousel": "^2.6.3",
     "svgo": "^2.0.3",
-    "tailwindcss": "2.1.2"
+    "tailwindcss": "2.1.4"
   }
 }
