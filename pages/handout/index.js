@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Text, Card, Badge } from "@goright/design-system";
+import { Text, Card, Badge, Emoji } from "@goright/design-system";
 
 import Link from "next/link";
 
@@ -10,7 +10,7 @@ export const blocks = [
   {
     title: "Workshop flow",
     slug: "workshop-flow",
-    roles: [],
+    roles: ["designer", "developer"],
     day: 1,
   },
   {
@@ -144,6 +144,7 @@ export default function HandoutPage() {
     <div className="container max-w-5xl mx-auto mt-16">
       <div className="text-center text-light-on-background-900">
         <Text variant="xlBolder" className="mb-6">
+          <Emoji symbol="👋 " label="hand" />
           Welcome
         </Text>
         <Text variant="6xl" className="mb-32">
@@ -151,6 +152,7 @@ export default function HandoutPage() {
         </Text>
         <Text variant="xlBolder" className="mb-6">
           What's next
+          <Emoji symbol="👇" label="hand" />
         </Text>
       </div>
       {/* CARDS SECTION */}

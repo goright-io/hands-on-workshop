@@ -1,96 +1,97 @@
 import React from "react";
+import { Text, Card, Badge, Emoji } from "@goright/design-system";
 
-import Hero from "@components/hero";
-import Card from "@components/card";
-import Ribbon from "@components/ribbon";
+// import Hero from "@components/hero";
+// import Card from "@components/card";
+// import Ribbon from "@components/ribbon";
 import Link from "next/link";
-import ToastIcon from "./icons/toast.svg";
-import ComponentsIcon from "./icons/web-design.svg";
-import BoxIcon from "./icons/package.svg";
-import CodingIcon from "./icons/coding.svg";
-import LegoIcon from "./icons/blocks.svg";
-import FeedbackIcon from "./icons/chat-box.svg";
-import DeploymentIcon from "./icons/deployment.svg";
-import TestingIcon from "./icons/testing.svg";
-import SyncIcon from "./icons/sync.svg";
-import SetupIcon from "./icons/setup.svg";
-import FlagIcon from "./icons/flag.svg";
-import CheckList from "./icons/check-list.svg";
-import Sketch from "./icons/sketch2.svg";
-import SettingsIcon from "./icons/settings.svg";
-import Flow from "./icons/flow.svg";
+// import ToastIcon from "./icons/toast.svg";
+// import ComponentsIcon from "./icons/web-design.svg";
+// import BoxIcon from "./icons/package.svg";
+// import CodingIcon from "./icons/coding.svg";
+// import LegoIcon from "./icons/blocks.svg";
+// import FeedbackIcon from "./icons/chat-box.svg";
+// import DeploymentIcon from "./icons/deployment.svg";
+// import TestingIcon from "./icons/testing.svg";
+// import SyncIcon from "./icons/sync.svg";
+// import SetupIcon from "./icons/setup.svg";
+// import FlagIcon from "./icons/flag.svg";
+// import CheckList from "./icons/check-list.svg";
+// import Sketch from "./icons/sketch2.svg";
+// import SettingsIcon from "./icons/settings.svg";
+// import Flow from "./icons/flow.svg";
 
 const pathPrefix = "/handout";
 const blocks = [
   {
     title: "Workshop flow",
-    image: Flow,
+    // image: Flow,
     slug: "workshop-flow",
     roles: [],
   },
   {
     title: "Making a toast",
-    image: ToastIcon,
+    // image: ToastIcon,
     slug: "toast",
     roles: ["designer", "developer"],
   },
   {
     title: "Figma setup",
-    image: SettingsIcon,
+    // image: SettingsIcon,
     slug: "figma-setup",
     roles: ["designer"],
   },
   {
     title: "Repository setup",
-    image: SetupIcon,
+    // image: SetupIcon,
     slug: "repo-setup",
     roles: ["developer"],
   },
   {
     title: "UI inventory",
-    image: BoxIcon,
+    // image: BoxIcon,
     slug: "ui-inventory",
     roles: ["developer", "designer"],
   },
   {
     title: "Design tokens",
-    image: Sketch,
+    // image: Sketch,
     slug: "design-tokens",
     roles: ["designer"],
   },
   {
     title: "Coding the library",
-    image: CodingIcon,
+    // image: CodingIcon,
     slug: "coding-library",
     roles: ["developer"],
   },
   {
     title: "Releasing the library",
-    image: FlagIcon,
+    // image: FlagIcon,
     slug: "releasing-library",
     roles: ["developer"],
   },
   {
     title: "Product update",
-    image: ComponentsIcon,
+    // image: ComponentsIcon,
     slug: "product-update",
     roles: ["developer"],
   },
   {
     title: "Design Changes",
-    image: LegoIcon,
+    // image: LegoIcon,
     slug: "re-design",
     roles: ["designer"],
   },
   {
     title: "Cast in code",
-    image: CheckList,
+    // image: CheckList,
     slug: "cast-in-code",
     roles: ["developer"],
   },
   {
     title: "Product release",
-    image: DeploymentIcon,
+    // image: DeploymentIcon,
     slug: "product-release",
     roles: ["developer"],
   },
@@ -102,13 +103,13 @@ const blocks = [
   // },
   {
     title: "Automatic syncronizations",
-    image: SyncIcon,
+    // image: SyncIcon,
     slug: "autosync",
     roles: ["developer"],
   },
   {
     title: "Feedback Form",
-    image: FeedbackIcon,
+    // image: FeedbackIcon,
     slug: "feedback",
     url:
       "https://docs.google.com/forms/d/124ha3LG7-07rizB9yjoqNGkB31Yzw6jtFvImsz7-Utg",
@@ -116,39 +117,70 @@ const blocks = [
   },
 ];
 
-export default function HandoutPage() {
+const Blocks = (props) => {
   return (
     <>
-      <Hero>
-        <h2 className="text-2xl text-bold">
-          Welcome to Hands-on with Design Systems workshop!
-        </h2>
-      </Hero>
-      {/* CARDS SECTION */}
-      <div className="flex-1 w-full h-full bg-gray-200">
-        <div className="container flex flex-wrap max-w-5xl m-8 mx-auto">
-          {blocks.map((block) => {
-            const link = block.url ? block.url : `${pathPrefix}/v2/${block.slug}`;
-            return (
-              <Card key={block.slug} className="sm:w-1/2 md:w-1/3 group">
-                <div className="w-full h-full px-16 pt-4 pb-8 md:px-8">
-                  {<block.image className="w-full h-full p-2" />}
-                </div>
-                <Link href={link}>
-                  <a className="absolute top-0 left-0 w-full h-full cursor-pointer ">
-                    <div className="flex items-center justify-center w-full h-full text-lg text-center text-white uppercase transition duration-300 bg-gray-700 opacity-90 group-hover:bg-transparent text-bold group-hover:transform group-hover:-translate-y-1/1 group-hover:text-transparent">
-                      <div>{block.title}</div>
-                    </div>
-                  </a>
-                </Link>
-                {block.roles.map((r) => (
-                  <Ribbon key={r} role={r} />
-                ))}
-              </Card>
-            );
-          })}
-        </div>
-      </div>
+      {blocks.map((block) => {
+        const link = block.url ? block.url : `${pathPrefix}/${block.slug}`;
+        const enabled = block.day === props.day || props.day === "all";
+
+        const blockCard = (
+          <Card
+            key={block.slug}
+            heading={block.title}
+            link={{ link: undefined, text: undefined }}
+            className={enabled ? "cursor-ponter p-5" : ""}
+          >
+            <div className="flex">
+              <Badge
+                role="developer"
+                isHidden={!block.roles.includes("developer")}
+              />
+              <Badge
+                role="designer"
+                isHidden={!block.roles.includes("designer")}
+              />
+            </div>
+          </Card>
+        );
+
+        return enabled ? (
+          <Link href={link} key={block.title} className="cursor-pointer">
+            <a>{blockCard}</a>
+          </Link>
+        ) : (
+          <div
+            className="filter grayscale sopacity-80 hover:none"
+            key={block.title}
+          >
+            {blockCard}
+          </div>
+        );
+      })}
     </>
+  );
+};
+
+export default function HandoutPage() {
+  return (
+    <div className="container max-w-5xl mx-auto mt-16">
+      <div className="text-center text-light-on-background-900">
+        <Text variant="xlBolder" className="mb-6">
+          <Emoji symbol="👋 " label="hand" />
+          Welcome
+        </Text>
+        <Text variant="6xl" className="mb-32">
+          Hands-on with design systems workshop handout.
+        </Text>
+        <Text variant="xlBolder" className="mb-6">
+          What's next
+          <Emoji symbol="👇" label="hand" />
+        </Text>
+      </div>
+      {/* CARDS SECTION */}
+      <div className="grid grid-cols-3 gap-10">
+        <Blocks day="all" />
+      </div>
+    </div>
   );
 }

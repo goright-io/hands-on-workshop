@@ -36,12 +36,12 @@ export default function PeopleSay() {
   return (
     <div className="relative max-w-4xl mx-auto overflow-x-visible mt-28">
       <div className="flex items-start">
-        <Icon name="Idea32" className="mr-6" />
+        <Icon name="Forum32" className="mr-6" />
         <Text variant="6Xl" as="h2">
           People Say
         </Text>
       </div>
-      <div className="max-content">
+      <div className="">
         <Testimonial testimonials={testimonials} />
       </div>
     </div>

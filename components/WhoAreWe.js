@@ -45,12 +45,12 @@ export default function WhoAreWe() {
             person.align === "reverse" ? "flex-row-reverse" : "flex-row"
           )}
         >
-          <div className="w-5/12">
+          <div className="w-4/12">
             <img src={person.avatar} alt="Varya Stepanova" />
           </div>
           <div
             className={classnames(
-              "mt-auto w-7/12 text-light-on-background-900",
+              "mt-auto w-8/12 text-light-on-background-900",
               person.align === "reverse"
                 ? "text-right pr-10"
                 : "text-left pl-10"

@@ -29,8 +29,11 @@ export default function Deliverables() {
         <Text
           as="figcaption"
           variant="sm"
-          className="text-light-on-background-500"
-        ></Text>
+          className="mt-2 text-center text-light-on-background-500"
+        >
+          Sneak peek: Changes in Figma design tokens are automatically reflected
+          in the components and exported to code.
+        </Text>
       </figure>
     </div>
   );

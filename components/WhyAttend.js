@@ -9,7 +9,7 @@ export default function WhyAttend() {
           Why Attend
         </Text>
       </div>
-      <div className="grid grid-cols-2 gap-x-20 gap-y-10 mt-10">
+      <div className="grid grid-cols-2 mt-10 gap-x-20 gap-y-16">
         <div className="">
           <Text as="h3" variant="2Xl">
             As a Designer
