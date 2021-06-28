@@ -77,7 +77,7 @@ export default function IndexPage() {
             REGISTER
           </Button>
           <p className="m-6 mx-6 text-sm text-bold">
-            8 tickets for designers, 8 tickets for developers
+            7 tickets for designers, 7 tickets for developers
           </p>
           {/* <p className="w-full text-xl font-bold text-center uppercase tracking-loose">
             Want same workshop but
